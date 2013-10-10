@@ -1,0 +1,4 @@
+point
+=====
+
+JavaScript Point implementation
