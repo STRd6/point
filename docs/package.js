@@ -31,7 +31,7 @@
     "pixie.cson": {
       "path": "pixie.cson",
       "mode": "100644",
-      "content": "version: \"0.1.0\"\nremoteDependencies: [\n  \"http://strd6.github.io/require/v0.2.2.js\"\n]\n",
+      "content": "version: \"0.1.0\"\nentryPoint: \"point\"\nremoteDependencies: [\n  \"http://strd6.github.io/require/v0.2.2.js\"\n]\n",
       "type": "blob"
     },
     "interactive_runtime.coffee.md": {
@@ -54,7 +54,7 @@
     },
     "pixie": {
       "path": "pixie",
-      "content": "module.exports = {\"version\":\"0.1.0\",\"remoteDependencies\":[\"http://strd6.github.io/require/v0.2.2.js\"]};",
+      "content": "module.exports = {\"version\":\"0.1.0\",\"entryPoint\":\"point\",\"remoteDependencies\":[\"http://strd6.github.io/require/v0.2.2.js\"]};",
       "type": "blob"
     },
     "interactive_runtime": {
@@ -63,7 +63,7 @@
       "type": "blob"
     }
   },
-  "entryPoint": "main",
+  "entryPoint": "point",
   "dependencies": {},
   "remoteDependencies": [
     "http://strd6.github.io/require/v0.2.2.js"
