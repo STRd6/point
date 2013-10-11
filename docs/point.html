@@ -402,10 +402,10 @@ Point(5, 7).magnitude()</code></pre>
                 <a class="pilcrow" href="#section-23">&#182;</a>
               </div>
               <blockquote>
-<pre><code>point = Point(0, 1)
+<pre><code>#! example
+point = Point(0, 1)
 
-point.direction()
-# =&gt; 1.5707963267948966 # Math.PI / 2</code></pre>
+point.direction()</code></pre>
 </blockquote>
 <hr>
 
@@ -468,11 +468,11 @@ perpendicular to the xy plane.</p>
                 <a class="pilcrow" href="#section-27">&#182;</a>
               </div>
               <blockquote>
-<pre><code>pointA = Point(2, 3)
+<pre><code>#! example
+pointA = Point(2, 3)
 pointB = Point(9, 2)
 
-pointA.distance(pointB)
-# =&gt; 7.0710678118654755 # Math.sqrt(50)</code></pre>
+pointA.distance(pointB)</code></pre>
 </blockquote>
 <hr>
 
@@ -493,26 +493,7 @@ such that if <code>eval</code>d it will return a <code>Point</code></p>
 
             </div>
             <div class="content"><pre><code class="lang-coffeescript">  toString: -&gt;
-    <span class="string">"Point(<span class="subst">#{@x}</span>, <span class="subst">#{@y}</span>)"</span>
-
-  snap: (n) -&gt;
-    Point
-      x: <span class="property">@x</span>.snap(n)
-      y: <span class="property">@y</span>.snap(n)
-
-  angle: -&gt;
-    Math.atan2(<span class="property">@y</span>, <span class="property">@x</span>)
-
-<span class="string">"""
-  abs
-  ceil
-  floor
-  truncate
-"""</span>.split(<span class="string">"\n"</span>).forEach (method) -&gt;
-  Point::[method] = -&gt;
-    Point
-      x: <span class="property">@x</span>[method]()
-      y: <span class="property">@y</span>[method]()</code></pre>
+    <span class="string">"Point(<span class="subst">#{@x}</span>, <span class="subst">#{@y}</span>)"</span></code></pre>
 </div>
         </li>
         
@@ -537,11 +518,11 @@ such that if <code>eval</code>d it will return a <code>Point</code></p>
                 <a class="pilcrow" href="#section-30">&#182;</a>
               </div>
               <blockquote>
-<pre><code>pointA = Point(2, 3)
+<pre><code>#! example
+pointA = Point(2, 3)
 pointB = Point(9, 2)
 
-Point.distance(pointA, pointB)
-# =&gt; 7.0710678118654755 # Math.sqrt(50)</code></pre>
+Point.distance(pointA, pointB)</code></pre>
 </blockquote>
 <hr>
 
@@ -572,11 +553,11 @@ Point.distance(pointA, pointB)
                 <a class="pilcrow" href="#section-32">&#182;</a>
               </div>
               <blockquote>
-<pre><code>pointA = Point(2, 3)
+<pre><code>#! example
+pointA = Point(2, 3)
 pointB = Point(9, 2)
 
-Point.distanceSquared(pointA, pointB)
-# =&gt; 50</code></pre>
+Point.distanceSquared(pointA, pointB)</code></pre>
 </blockquote>
 <hr>
 
@@ -621,13 +602,8 @@ Point.distanceSquared(pointA, pointB)
                 <a class="pilcrow" href="#section-35">&#182;</a>
               </div>
               <blockquote>
-<pre><code>point = Point.fromAngle(Math.PI / 2)
-
-point.x
-# =&gt; 0
-
-point.y
-# =&gt; 1</code></pre>
+<pre><code>#! example
+Point.fromAngle(Math.PI / 2)</code></pre>
 </blockquote>
 <hr>
 
@@ -647,11 +623,11 @@ point.y
 standing at point p2, then this method will return the direction
 that the dude standing at p1 will need to face to look at p2.</p>
 <blockquote>
-<pre><code>p1 = Point(0, 0)
+<pre><code>#! example
+p1 = Point(0, 0)
 p2 = Point(7, 3)
 
-Point.direction(p1, p2)
-# =&gt; 0.40489178628508343</code></pre>
+Point.direction(p1, p2)</code></pre>
 </blockquote>
 
             </div>
@@ -731,6 +707,37 @@ Point.direction(p1, p2)
             </div>
             <div class="content"><pre><code class="lang-coffeescript"><span class="function"><span class="title">isObject</span></span> = (object) -&gt;
   Object.prototype.toString.call(object) <span class="keyword">is</span> <span class="string">"[object Object]"</span></code></pre>
+</div>
+        </li>
+        
+        
+        <li id="section-42">
+            <div class="annotation">
+              <div class="pilwrap">
+                <a class="pilcrow" href="#section-42">&#182;</a>
+              </div>
+              <h2 id="live-examples">Live Examples</h2>
+
+            </div>
+            <div class="content"><pre><code class="lang-coffeescript">
+</code></pre>
+</div>
+        </li>
+        
+        
+        <li id="section-43">
+            <div class="annotation">
+              <div class="pilwrap">
+                <a class="pilcrow" href="#section-43">&#182;</a>
+              </div>
+              <blockquote>
+<pre><code>#! setup
+require(&quot;/interactive_runtime&quot;)</code></pre>
+</blockquote>
+
+            </div>
+            <div class="content"><pre><code class="lang-coffeescript">
+</code></pre>
 </div>
         </li>
         
