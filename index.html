@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="manifest.appcache?1381451397384">
+<html manifest="manifest.appcache?1381452061552">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script src="http://strd6.github.io/require/v0.2.2.js"></script>
@@ -8,7 +8,7 @@
 <script>
 ;(function(PACKAGE) {
 var require = Require.generateFor(PACKAGE);
-require('./main')
+require('./point')
 })({
   "version": "0.1.0",
   "source": {
@@ -39,7 +39,7 @@ require('./main')
     "pixie.cson": {
       "path": "pixie.cson",
       "mode": "100644",
-      "content": "version: \"0.1.0\"\nremoteDependencies: [\n  \"http://strd6.github.io/require/v0.2.2.js\"\n]\n",
+      "content": "version: \"0.1.0\"\nentryPoint: \"point\"\nremoteDependencies: [\n  \"http://strd6.github.io/require/v0.2.2.js\"\n]\n",
       "type": "blob"
     },
     "interactive_runtime.coffee.md": {
@@ -62,7 +62,7 @@ require('./main')
     },
     "pixie": {
       "path": "pixie",
-      "content": "module.exports = {\"version\":\"0.1.0\",\"remoteDependencies\":[\"http://strd6.github.io/require/v0.2.2.js\"]};",
+      "content": "module.exports = {\"version\":\"0.1.0\",\"entryPoint\":\"point\",\"remoteDependencies\":[\"http://strd6.github.io/require/v0.2.2.js\"]};",
       "type": "blob"
     },
     "interactive_runtime": {
@@ -71,7 +71,7 @@ require('./main')
       "type": "blob"
     }
   },
-  "entryPoint": "main",
+  "entryPoint": "point",
   "dependencies": {},
   "remoteDependencies": [
     "http://strd6.github.io/require/v0.2.2.js"
