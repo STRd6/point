@@ -144,10 +144,10 @@ Returns the direction in radians of this point from the origin.
       direction: ->
         Math.atan2(@y, @x)
 
+>     #! example
 >     point = Point(0, 1)
 >
 >     point.direction()
->     # => 1.5707963267948966 # Math.PI / 2
 
 ----
 
@@ -172,11 +172,11 @@ perpendicular to the xy plane.
       distance: (other) ->
         Point.distance(this, other)
 
+>     #! example
 >     pointA = Point(2, 3)
 >     pointB = Point(9, 2)
 >
 >     pointA.distance(pointB)
->     # => 7.0710678118654755 # Math.sqrt(50)
 
 ----
 
@@ -185,36 +185,17 @@ such that if `eval`d it will return a `Point`
 
       toString: ->
         "Point(#{@x}, #{@y})"
-    
-      snap: (n) ->
-        Point
-          x: @x.snap(n)
-          y: @y.snap(n)
-    
-      angle: ->
-        Math.atan2(@y, @x)
-
-    """
-      abs
-      ceil
-      floor
-      truncate
-    """.split("\n").forEach (method) ->
-      Point::[method] = ->
-        Point
-          x: @x[method]()
-          y: @y[method]()
 
 `distance` Compute the Euclidean distance between two points.
 
     Point.distance = (p1, p2) ->
       Math.sqrt(Point.distanceSquared(p1, p2))
 
+>     #! example
 >     pointA = Point(2, 3)
 >     pointB = Point(9, 2)
 >
 >     Point.distance(pointA, pointB)
->     # => 7.0710678118654755 # Math.sqrt(50)
 
 ----
 
@@ -223,11 +204,11 @@ such that if `eval`d it will return a `Point`
     Point.distanceSquared = (p1, p2) ->
       Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2)
 
+>     #! example
 >     pointA = Point(2, 3)
 >     pointB = Point(9, 2)
 >
 >     Point.distanceSquared(pointA, pointB)
->     # => 50
 
 ----
 
@@ -241,13 +222,8 @@ Construct a point on the unit circle for the given angle.
     Point.fromAngle = (angle) ->
       Point(Math.cos(angle), Math.sin(angle))
 
->     point = Point.fromAngle(Math.PI / 2)
->
->     point.x
->     # => 0
->
->     point.y
->     # => 1
+>     #! example
+>     Point.fromAngle(Math.PI / 2)
 
 ----
 
@@ -255,11 +231,11 @@ If you have two dudes, one standing at point p1, and the other
 standing at point p2, then this method will return the direction
 that the dude standing at p1 will need to face to look at p2.
 
+>     #! example
 >     p1 = Point(0, 0)
 >     p2 = Point(7, 3)
 >
 >     Point.direction(p1, p2)
->     # => 0.40489178628508343
 
     Point.direction = (p1, p2) ->
       Math.atan2(
@@ -289,3 +265,9 @@ Helpers
 
     isObject = (object) ->
       Object.prototype.toString.call(object) is "[object Object]"
+
+Live Examples
+-------------
+
+>     #! setup
+>     require("/interactive_runtime")
