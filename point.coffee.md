@@ -106,7 +106,7 @@ treats the point as though it is a vector from the origin to (x, y).
 
 ----
 
-Determine whether this `Point` is equal to another `Point`. Returns `true` if 
+Determine whether this `Point` is equal to another `Point`. Returns `true` if
 they are equal and `false` otherwise.
 
       equal: (other) ->
@@ -136,7 +136,7 @@ Calculate the magnitude of this Point (Vector).
 
 >     #! example
 >     Point(5, 7).magnitude()
-  
+
 ----
 
 Returns the direction in radians of this point from the origin.
