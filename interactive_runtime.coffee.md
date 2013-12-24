@@ -13,8 +13,9 @@ Register our example runner.
 
       result = eval(program)
 
-      if result.toFixed
+      if typeof result is "number"
         if result != (0 | result)
           result = result.toFixed(4)
+    
 
       outputElement.textContent = result

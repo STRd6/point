@@ -180,6 +180,11 @@ perpendicular to the xy plane.
 
 ----
 
+`toFixed` returns a string representation of this point with fixed decimal places.
+
+      toFixed: (n) ->
+        "Point(#{@x.toFixed(n)}, #{@y.toFixed(n)})"
+
 `toString` returns a string representation of this point. The representation is
 such that if `eval`d it will return a `Point`
 
