@@ -55,9 +55,10 @@
 
   result = eval(program)
 
-  <span class="keyword">if</span> result.toFixed
+  <span class="keyword">if</span> <span class="keyword">typeof</span> result <span class="keyword">is</span> <span class="string">"number"</span>
     <span class="keyword">if</span> result != (<span class="number">0</span> | result)
       result = result.toFixed(<span class="number">4</span>)
+
 
   outputElement.textContent = result</code></pre>
 </div>
@@ -65,9 +66,17 @@
         
     </ul>
   </div>
-  <script src="package.js"></script>,<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js"></script>
-<script src="http://strd6.github.io/require/v0.2.2.js"></script>
-<script src="http://strd6.github.io/interactive/v0.8.0.js"></script>
+<script src="http://strd6.github.io/require/v0.2.2.js"></script><script>
+  $.ajax({
+    url: "http://strd6.github.io/interactive/v0.8.1.jsonp",
+    dataType: "jsonp",
+    jsonpCallback: "STRd6/interactive:v0.8.1",
+    cache: true
+  }).then(function(PACKAGE) {
+    Require.generateFor(PACKAGE)("./" + PACKAGE.entryPoint)
+  })
+</script><script src="package.js"></script>
 </body>
 </html>
