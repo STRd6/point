@@ -176,7 +176,7 @@
     },
     "network_count": 0,
     "subscribers_count": 1,
-    "branch": "master",
+    "branch": "v0.2.0",
     "defaultBranch": "master"
   },
   "dependencies": {}
